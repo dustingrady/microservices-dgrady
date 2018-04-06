@@ -9,9 +9,9 @@ public class QuotesWeb {
 	@RequestMapping("/quotes")
 	@ResponseBody
 	QuotesWebResult quotes(){
-		QuotesWebResult kwRes = new QuotesWebResult();
-		kwRes.setId("1");
-		kwRes.setName("quote");
-		return kwRes;
+		QuotesWebResult qwRes = new QuotesWebResult();
+		qwRes.setId("1");
+		qwRes.setName("quote");
+		return qwRes;
 	}
 }
