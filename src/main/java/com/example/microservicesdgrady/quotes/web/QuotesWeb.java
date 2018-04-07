@@ -16,8 +16,7 @@ public class QuotesWeb {
 	@ResponseBody
 	QuotesWebResult quotes(){
 		QuotesWebResult qwRes = new QuotesWebResult();
-		qwRes.setId("1");
-		qwRes.setName("quote");
+		
 		qwRes.setApiUrl(quotesApiUrl);
 		return qwRes;
 	}
