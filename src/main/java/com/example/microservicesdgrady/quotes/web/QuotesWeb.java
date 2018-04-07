@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.microservicesdgrady.images.logic.ImagesLogicManager;
+import com.example.microservicesdgrady.quotes.logic.QuotesLogicManager;
+
 
 @RestController
 public class QuotesWeb {
@@ -15,7 +16,7 @@ public class QuotesWeb {
 	//@Value("${quotesApiKey:123456}")
 	//private String quotesApiKey;
 	@Autowired
-	ImagesLogicManager manager;
+	QuotesLogicManager manager;
 	@RequestMapping("/quotes")
 	@ResponseBody
 	QuotesWebResult quotes(){
