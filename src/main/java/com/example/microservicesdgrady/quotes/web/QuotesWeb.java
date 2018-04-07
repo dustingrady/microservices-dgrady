@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuotesWeb {
 	@Value("${quotesApiUrl:default.quotes.url}")
 	private String quotesApiUrl;
-	//@Value("${quotesApiKey:123456}")
-	//private String quotesApiKey;
+	@Value("${quotesApiKey:123456}")
+	private String quotesApiKey;
 	
 	@RequestMapping("/quotes")
 	@ResponseBody
