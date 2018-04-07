@@ -2,6 +2,8 @@ package com.example.microservicesdgrady.quotes.web;
 
 public class QuotesWebResult {
 	private String apiUrl;
+	
+	/*
 	private String oAuthToken;
 
 	public String getoAuthToken() {
@@ -10,6 +12,7 @@ public class QuotesWebResult {
 	public void setoAuthToken(String oAuthToken) {
 		this.oAuthToken = oAuthToken;
 	}
+	*/
 	
 	public String getApiUrl(){
 		return apiUrl;
