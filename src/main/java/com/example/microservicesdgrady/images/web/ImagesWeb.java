@@ -13,10 +13,10 @@ public class ImagesWeb {
 	ImagesLogicManager manager;
 	@RequestMapping("/images")
 	@ResponseBody
-	ImagesWebResult images(){
+	String images(){
 		String result = manager.obtainImageApiImageUrl();
-		ImagesWebResult iwRes = new ImagesWebResult();
-		iwRes.setUrl(result);
-		return iwRes;
+		//ImagesWebResult iwRes = new ImagesWebResult();
+		//iwRes.setUrl(result);
+		return result;
 	}
 }
