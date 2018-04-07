@@ -14,11 +14,11 @@ public class ImagesLogicManager {
 	@Value("${imageApiTags:}")
 	private String imageApiTags;
 	
-	public String obtainImageApiImageUrl(){
+	public ResponseEntity<String> obtainImageApiImageUrl(){
 		String apiUrl = imageApiUrl + imageApiKey + imageApiTags;
 		RestTemplate rest = new RestTemplate();
 		ResponseEntity<String> response = rest.getForEntity(apiUrl, String.class);
-		return response.getBody();
+		return response;
 	}
 	
 }
