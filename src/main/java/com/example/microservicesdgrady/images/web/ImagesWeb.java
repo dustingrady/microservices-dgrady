@@ -14,7 +14,8 @@ public class ImagesWeb {
 	@RequestMapping("/images")
 	@ResponseBody
 	ResponseEntity<String> images(){
-		ResponseEntity<String> result = manager.obtainImageApiUrl();
+		//ResponseEntity<String> result = manager.obtainImageApiUrl();
+		ResponseEntity<String> result = manager.obtainImageApiKey();
 		//ImagesWebResult iwRes = new ImagesWebResult();
 		//iwRes.setUrl(result);
 		return result;
