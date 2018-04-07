@@ -7,10 +7,10 @@ import org.springframework.http.ResponseEntity;
 
 @Component
 public class QuotesLogicManager {
-	@Value("${quoteApiUrl:")
+	@Value("${quoteApiUrl:https://talaikis.com/api/quotes/random/}")
 	private String quoteApiUrl;
 
-	public ResponseEntity<String> obtainQuoteApiImageUrl(){
+	public ResponseEntity<String> obtainQuoteApiUrl(){
 		String apiUrl = quoteApiUrl;
 		RestTemplate rest = new RestTemplate();
 		ResponseEntity<String> response = rest.getForEntity(apiUrl, String.class);

@@ -12,16 +12,12 @@ import com.example.microservicesdgrady.quotes.logic.QuotesLogicManager;
 
 @RestController
 public class QuotesWeb {
-	//@Value("${quotesApiUrl:https://talaikis.com/api/quotes/random/}")
-	//private String quotesApiUrl;
-	//@Value("${quotesApiKey:123456}")
-	//private String quotesApiKey;
 	@Autowired
 	QuotesLogicManager manager;
 	@RequestMapping("/quotes")
 	@ResponseBody
 	ResponseEntity<String> quotes(){
-		ResponseEntity<String> result = manager.obtainQuoteApiImageUrl();
+		ResponseEntity<String> result = manager.obtainQuoteApiUrl();
 		//QuotesWebResult qwRes = new QuotesWebResult();
 		//qwRes.setApiUrl(quotesApiUrl);
 		return result;
