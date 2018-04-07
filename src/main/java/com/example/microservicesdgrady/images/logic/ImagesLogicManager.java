@@ -22,5 +22,4 @@ public class ImagesLogicManager {
 		ResponseEntity<String> response = rest.getForEntity(apiUrl, String.class);
 		return response;
 	}
-	
 }
