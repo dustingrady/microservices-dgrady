@@ -7,8 +7,7 @@ import org.springframework.http.ResponseEntity;
 
 @Component
 public class ImagesLogicManager {
-	//@Value("${imageApiUrl:https://jsonplaceholder.typicode.com/users}")
-	@Value("${imageApiUrl:	https://www.google.com/}") //Testing
+	@Value("${imageApiUrl:https://jsonplaceholder.typicode.com/users}")
 	private String imageApiUrl;
 	@Value("${imageApiKey:}")
 	private String imageApiKey;
