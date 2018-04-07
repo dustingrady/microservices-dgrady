@@ -18,8 +18,6 @@ public class QuotesWeb {
 	@ResponseBody
 	ResponseEntity<String> quotes(){
 		ResponseEntity<String> result = manager.obtainQuoteApiUrl();
-		//QuotesWebResult qwRes = new QuotesWebResult();
-		//qwRes.setApiUrl(quotesApiUrl);
 		return result;
 	}
 }
