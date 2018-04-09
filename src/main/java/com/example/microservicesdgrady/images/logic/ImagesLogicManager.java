@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 public class ImagesLogicManager {
 	//@Value("${imageApiUrl:https://jsonplaceholder.typicode.com/users}")
 	//private String imageApiUrl;
-	@Value("${imageApiKey:default.quotes.key}")
+	@Value("${imageApiKey:default.api.key}")
 	private String imageApiKey;
 
 	/*

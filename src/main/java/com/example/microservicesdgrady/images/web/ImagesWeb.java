@@ -13,6 +13,7 @@ public class ImagesWeb {
 	ImagesLogicManager manager;
 	@RequestMapping("/images")
 	@ResponseBody
+	
 	ResponseEntity<String> images(){
 		//ResponseEntity<String> result = manager.obtainImageApiUrl();
 		ResponseEntity<String> result = manager.obtainImageApiKey();
@@ -20,4 +21,12 @@ public class ImagesWeb {
 		//iwRes.setUrl(result);
 		return result;
 	}
+	
+	/*
+	ImagesWebResult images(){
+		ImagesWebResult imRes = new ImagesWebResult();
+		imRes.setKey("1234");
+		return imRes;
+	}
+	*/
 }
