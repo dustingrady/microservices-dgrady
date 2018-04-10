@@ -7,10 +7,12 @@ import org.springframework.http.ResponseEntity;
 
 @Component
 public class ImagesLogicManager {
-	//@Value("${imageApiUrl:https://jsonplaceholder.typicode.com/users}")
-	//private String imageApiUrl;
+	@Value("${imageApiUrl:default.api.url}")
+	private String imageApiUrl;
 	@Value("${imageApiKey:default.api.key}")
 	private String imageApiKey;
+	@Value("${imageApiCategory:default.api.category}")
+	private String imageApiCategory;
 
 	/*
 	public ResponseEntity<String> obtainImageApiUrl(){
@@ -21,9 +23,10 @@ public class ImagesLogicManager {
 	}
 	*/
 	public ResponseEntity<String> obtainImageApiKey(){
-		String apiKey = imageApiKey;
+		//String apiKey = imageApiKey;
+		String apiUrl = imageApiUrl + imageApiKey + imageApiCategory;
 		RestTemplate rest = new RestTemplate();
-		ResponseEntity<String> response = rest.getForEntity(apiKey, String.class);
+		ResponseEntity<String> response = rest.getForEntity(apiUrl, String.class);
 		return response;
 	}
 }

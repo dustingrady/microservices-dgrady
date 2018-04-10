@@ -14,7 +14,6 @@ public class QuotesLogicManager {
 		String apiUrl = quoteApiUrl;
 		RestTemplate rest = new RestTemplate();
 		ResponseEntity<String> response = rest.getForEntity(apiUrl, String.class);
-		//System.out.println("Response: " + response); //Testing
 		return response;
 	}
 }
