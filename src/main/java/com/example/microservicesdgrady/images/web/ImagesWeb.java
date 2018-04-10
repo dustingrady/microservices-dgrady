@@ -15,18 +15,7 @@ public class ImagesWeb {
 	@ResponseBody
 	
 	ResponseEntity<String> images(){
-		//ResponseEntity<String> result = manager.obtainImageApiUrl();
-		ResponseEntity<String> result = manager.obtainImageApiKey();
-		//ImagesWebResult iwRes = new ImagesWebResult();
-		//iwRes.setUrl(result);
+		ResponseEntity<String> result = manager.obtainImageApiUrl();
 		return result;
 	}
-	
-	/*
-	ImagesWebResult images(){
-		ImagesWebResult imRes = new ImagesWebResult();
-		imRes.setKey("1234");
-		return imRes;
-	}
-	*/
 }

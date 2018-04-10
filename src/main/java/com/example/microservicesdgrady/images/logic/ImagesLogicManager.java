@@ -14,22 +14,14 @@ public class ImagesLogicManager {
 	@Value("${imageApiCategory:default.api.category}")
 	private String imageApiCategory;
 	
-	@Value("${testApiKey:default.api.category}")
-	private String testApiKey;
+	//@Value("${testApiKey:default.api.category}")
+	//private String testApiKey;
 
-	/*
 	public ResponseEntity<String> obtainImageApiUrl(){
-		String apiUrl = imageApiUrl;
+		//String apiKey = testApiKey;
+		String apiUrl = imageApiUrl + imageApiKey + imageApiCategory;
 		RestTemplate rest = new RestTemplate();
 		ResponseEntity<String> response = rest.getForEntity(apiUrl, String.class);
-		return response;
-	}
-	*/
-	public ResponseEntity<String> obtainImageApiKey(){
-		String apiKey = testApiKey;
-		//String apiUrl = imageApiUrl + imageApiKey + imageApiCategory;
-		RestTemplate rest = new RestTemplate();
-		ResponseEntity<String> response = rest.getForEntity(apiKey, String.class);
 		return response;
 	}
 }
